@@ -1,16 +1,10 @@
-package q01_basic.question04;
+package q01_basic.question05;
 
-class Member {
-	//TODO ここから実装する
+public class Member extends AbstMember {
 	private int id;
 	private String password;
-	private String name;
 	private int age;
 	private int rank;
-
-	public Member() {
-
-	}
 
 	/**
 	 * @return id
@@ -38,28 +32,6 @@ class Member {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public Member(int id, String password, String name, int age, int rank) {
-		this.id = id;
-		this.password = password;
-		this.name = name;
-		this.age = age;
-		this.rank = rank;
-	}
-
-	/**
-	 * @return name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name セットする name
-	 */
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	/**
@@ -90,10 +62,19 @@ class Member {
 		this.rank = rank;
 	}
 
-	public void rankUp() {
-		rank += 1;
-		System.out.println(">>>RANK UP>>>");
+	public Member() {
+	}
 
+	public Member(int id, String password, String name, int age, int rank) {
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.age = age;
+		this.rank = rank;
+	}
+
+	public void buyItem() {
+		System.out.println(name + " purchased the item at 50% off");
 	}
 
 	public void showMember() {
